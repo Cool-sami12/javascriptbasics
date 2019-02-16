@@ -63,5 +63,107 @@ function golfScore(par, strokes){
 
 }
 
-console.log (golfScore(5, 8));
+console.log (golfScore(5, 4));
+// plaing withe switch case
+function switchOfStuff(val){
+	var answer = "";
+	switch (val){
+		case "a":
+		answer = "apple";
+		break;
+		case "b":
+		answer = "bird";
+		break;
+		case "c":
+		answer = "cat";
+		break; 
+		default:
+		answer = "stuff";
+		break;
+	}
+	return answer;
+}
+console.log(switchOfStuff("c"));
 
+// objects
+var ourDog = {
+	"name": "camper",
+	"legs": 4,
+	"tails": 1,
+	"friends": ["everything"]
+};
+ourDog.name = "Happy Camper";
+
+//setup
+var myDog = {
+	"name": "Coders",
+	"legs": 4,
+	"tails": 1,
+	"friends": ["freeCodeCamp Campers"]
+};
+ 
+ myDog.name = "Happy Coder";
+ //adding a new property to an objects
+ myDog['bark'] = "woof!!";
+ delete myDog.tails;
+ // 
+ function phoneticLookup(val){
+ 	var result = "";
+
+ 	var lookup = {
+ 		"alpha": "Adams",
+ 		"bravo": "Boston",
+ 		"charlie": "Chicago",
+ 		"delta": "Denver",
+ 		"echo": "Easy",
+ 		"foxtrot": "frank",
+
+ 	};
+ 	result = lookup[val];
+ 	return result;
+ }
+console.log(phoneticLookup("charlie"));
+//checking if an objeect have a property 
+var myObj = {
+	gift: "pony",
+	pet: "kitten",
+	bed: "sleigh"
+};
+function checkObj(checkProp){
+	if (myObj.hasOwnProperty(checkProp)){
+		return myObj[checkProp];
+
+	} else {
+		return "Not Found"
+	}
+}
+  console.log(checkObj("hello"));
+
+  //
+   var collectionCopy = JSON.parse(JSON.stringify(collection));
+   function updateRecords(id, prop, value){
+   	if (value === ""){
+   		delete collection[id][prop];
+    } else if (prop === "tracks"){
+    	collection[id][prop] = collection[id][prop] || [];
+    	collection[id][prop].push(value);
+
+
+     } else {
+     	collection[id][prop] = value;
+
+     }
+     return collection;
+   }
+   updateRecords(2468, "tracks", "test");
+
+   console.log(updateRecords(5439, "artist", "ABBA"));
+
+// while loop iterations
+var myArray = [];
+var i = 0;
+while(i < 5){
+	myArray.push(i);
+	i++;
+}
+console.log(myArray);
