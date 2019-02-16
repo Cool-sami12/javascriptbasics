@@ -167,3 +167,73 @@ while(i < 5){
 	i++;
 }
 console.log(myArray);
+//for loop 
+
+var ourArray = [];
+for (var i =0; i < 5; i++){
+	ourArray.push(i);
+
+}
+var ourArr = [ 9, 10, 11, 12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++){
+	ourTotal += ourArr[i];
+}
+console.log(ourTotal);
+// nested for loop
+function multiplyAll(arr) {
+	var product = 1;
+	for(var i=0; i < arr.length; i++) {
+		for (var j=0;j<arr[i].length; j++){
+			product *= arr[i][j];
+		}
+
+	}
+	return product;
+
+}
+ var product = multiplyAll([[1,2][3,4][5,6,7]]);
+ console.log (product);
+
+// lookup profile
+function lookUpProfile(name, prop){
+	for(var i = 0; i < contacts.length; i++) {
+		if (contacts[i].firstName === name) {
+			return contacts[i][prop] || "No such property";
+
+		}
+	}
+	return "No such contact";
+}
+ 
+ var data = lookUpProfile("Shirlock", "lastName");
+ console.log(data);
+ // random number
+ var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+ function randomWholeNum(){
+ 	return Math.floor(Math.random()* 10);
+ }
+
+console.log(randomWholeNum());
+
+// random number between max and min
+function randomRange(myMin, myMax) {
+	return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+var myRandom = randomRange(5,15);
+console.log(myRandom);
+
+// converting str to intege
+function convertToInteger(str){
+	return parseInt(str, 2);
+
+}
+convertToInteger("10011");
+
+//
+function checkEqual(a, b) {
+	return a === b ? true : false; 
+	// return === b;
+}
+checkEqual(1, 2);
