@@ -237,3 +237,57 @@ function checkEqual(a, b) {
 	// return === b;
 }
 checkEqual(1, 2);
+
+let catName = "Quincy";
+let quote;
+
+catName= "Beau";
+function catTalk(){
+	"use strict";//enable strict mode ..catch mistakes
+	catName = "Oliver";
+	quote = catName + "says Meow!";
+}
+catTalk();
+//objects.freezed whenever you dont an object element to change
+
+//Arrow function
+const magic = () => new Date();
+// converting a normal function to an arrow function
+var myConcat = function(arr1, arr2) {
+	return	arr1.concat(arr2);
+};
+console.log(myConcat([1, 2], [3, 4, 5]));
+//
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+// spread operator [...]
+arr2 = [...arr1];
+// destructuring
+const Avg_Temperatures = {
+	today : 77.5,
+	tommorrow : 79
+};
+ function	 getTempOfTmrw(avgTemperatures) {
+ 	"use strict";
+
+ 	 const { tommorrow : tempOfTommorrow} = avgTemperatures;// get tommorow field from the avg temperature objects and assign it to the temp of tommorow variable  
+ 	 return tempOfTommorrow;
+
+ }
+ console.log(getTempOfTmrw(Avg_Temperatures));// anwser  79
+}
+// still on destructuring
+const LOCAL_FORECAST = {
+	today: { min: 72, max: 83}
+	tomorrow: { min: 73.3, max: 84.6}
+};
+
+function getMaxOfTmrw(forecast) {
+	"use strict";
+	const { tomorrow : { max : ,maxOfTomorrow}} = forecast; //destructuring
+
+	return	maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
